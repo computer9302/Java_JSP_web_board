@@ -40,7 +40,7 @@
 	<tr>
 		<td><%=list.get(i).getBd_no()%></td>
 		<td><%=list.get(i).getBd_name()%></td>
-		<td><a href=""><%=list.get(i).getBd_title()%></a></td>
+		<td><a href="selectone.jsp?bd_no=<%=list.get(i).getBd_no()%>"><%=list.get(i).getBd_title()%></a></td>
 		<td><%=list.get(i).getBd_date()%></td>
 		<td><a href="">수정</a></td>
 		<td><a href="">삭제</a></td>
@@ -51,7 +51,7 @@
 
 	<tr>
 		<td colspan="6" align="right">
-			<button onclick="">글쓰기</button>
+			<button onclick="location.href='insert.jsp'">글쓰기</button>
 		</td>
 	</tr>
 	</table>
