@@ -26,6 +26,17 @@ public class BoardDto {
 		// TODO Auto-generated constructor stub
 	}
 	
+	
+	
+	public BoardDto(int bd_no, String bd_title, String bd_content) {
+		super();
+		this.bd_no = bd_no;
+		this.bd_title = bd_title;
+		this.bd_content = bd_content;
+	}
+
+
+
 	//매개변수 생성자
 	public BoardDto(int bd_no, String bd_name, String bd_title, String bd_content, Date bd_date) {
 		super();

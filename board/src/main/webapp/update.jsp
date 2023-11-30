@@ -20,11 +20,11 @@
 	BoardDto dto = dao.selectOne(bd_no);
 %>
 	<form action="update_alert.jsp" method="post">
-		<input type="hidden" name="bd_no" value="<%=dto.getBd_no() %>">
+		<input type="hidden" name="bd_no" value="<%=dto.getBd_no()%>">
 		<table border="1">
 			<tr>
 				<th>NAME</th>
-				<td><%=dto.getBd_name() %></td>
+				<td><%=dto.getBd_name()%></td>
 			</tr>
 			<tr>
 				<th>TITLE</th>
@@ -32,7 +32,7 @@
 			</tr>
 			<tr>
 				<th>CONTENT</th>
-				<td><textarea rows="10" cols="60" name="bd_content"><%=dto.getBd_content() %></textarea></td>
+				<td><textarea rows="10" cols="60" name="bd_content"><%=dto.getBd_content()%></textarea></td>
 			</tr>
 			<tr>
 				<td colspan="2">

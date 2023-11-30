@@ -23,7 +23,23 @@
 	
 	BoardDao dao = new BoardDao();
 	int res = dao.update(dto);
+	
+	if(res>0){
 %>
-
+	<script type="text/javascript">
+		alert("글 수정 성공");
+		location.href="selectone.jsp?bd_no=<%=dto.getBd_no()%>";
+	</script>
+	
+<%
+	} else{
+%>
+	<script type="text/javascript">
+		alert("글 수정 실패");
+		location.href="update.jsp?bd_no=<%=dto.getBd_no()%>";
+	</script>
+<%
+	}
+%>
 </body>
 </html>
