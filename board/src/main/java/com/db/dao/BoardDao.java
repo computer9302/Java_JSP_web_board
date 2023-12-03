@@ -188,5 +188,33 @@ public class BoardDao {
 	
 	//글 삭제
 	public int delete(int bd_no) {
-		return bd_no;}
+		//db 계정 연결
+		try {
+			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "scott", "tiger");
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		PreparedStatement pstm = null;
+		int res = 0;
+		
+		String sql = "DELETE FROM BOARD WHERE BD_NO=?";
+		try {
+			pstm = con.prepareStatement(sql);
+			pstm.setInt(1, bd_no);
+			
+			res = pstm.executeUpdate();
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				pstm.close();
+				con.close();
+			}catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return res;
+		
+	}
 }

@@ -18,6 +18,7 @@
 	List<BoardDto> list = dao.selectAll();
 %>
 <body>
+<%@ include file="./fix/header.jsp" %>
 	<h1>게시판 목록</h1>
 	<table border="1">
 		<col width="50px">
@@ -43,7 +44,7 @@
 		<td><a href="selectone.jsp?bd_no=<%=list.get(i).getBd_no()%>"><%=list.get(i).getBd_title()%></a></td>
 		<td><%=list.get(i).getBd_date()%></td>
 		<td><a href="update.jsp?bd_no=<%=list.get(i).getBd_no()%>">수정</a></td>
-		<td><a href="">삭제</a></td>
+		<td><a href="delete.jsp?bd_no=<%=list.get(i).getBd_no()%>">삭제</a></td>
 	</tr>
 <% 
 		}
@@ -55,6 +56,6 @@
 		</td>
 	</tr>
 	</table>
-	
+<%@ include file="./fix/footer.jsp" %>	
 </body>
 </html>
