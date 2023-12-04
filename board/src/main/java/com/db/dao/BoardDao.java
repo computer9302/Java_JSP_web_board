@@ -217,4 +217,10 @@ public class BoardDao {
 		return res;
 		
 	}
+	
+	//글 여러개 삭제
+	public int multiDelete(String[] bd_no) {
+		//db 계정 연결
+		
+	}
 }
