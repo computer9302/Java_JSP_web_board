@@ -12,6 +12,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@ include file="./fix/header.jsp" %>
 <%
 	int bd_no = Integer.parseInt(request.getParameter("bd_no"));
 	BoardDao dao = new BoardDao();
@@ -38,5 +39,6 @@
 			</td>
 		</tr>
 	</table>
+<%@ include file="./fix/footer.jsp" %>	
 </body>
 </html>

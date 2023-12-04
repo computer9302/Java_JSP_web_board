@@ -21,6 +21,6 @@
 </style>
 </head>
 <body>
-	<footer>비전공 기록광_datamoney.tistory.com copyright &copy; all rights reserved...</footer>
+	<footer>박준영_https://github.com/computer9302</footer>
 </body>
 </html>

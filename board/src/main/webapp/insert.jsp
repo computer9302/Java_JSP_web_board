@@ -10,6 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@ include file="./fix/header.jsp" %>
 	<h1>글쓰기</h1>
 	<form action="insert_alert.jsp" method="get">
 		<table border="1">
@@ -34,6 +35,6 @@
 		</table>
 	
 	</form>
-
+<%@ include file="./fix/footer.jsp" %>
 </body>
 </html>
