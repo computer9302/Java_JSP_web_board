@@ -28,6 +28,7 @@
 		<col width="100px">
 		<tr>
 			<th><input type="checkbox" name="all" onclick="allChk(this.cheked);"></th>
+			<th>No</th>
 			<th>Name</th>
 			<th>Title</th>
 			<th>Date</th>
