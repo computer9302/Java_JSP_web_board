@@ -12,6 +12,25 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+		function allChk(bool){
+			var chks = document.getElementsByName("chk");
+			for(var i=0; i<chks.length;i++){
+				chks[i].checked = bool;
+			}
+		}
+		//체크한 글 없다면 submit 이벤트 취소시키기
+		$(function(){
+			$("#multidelete").submit(function(){
+				if($("#multidelete input:checked").length==0){
+					alert("하나 이상 체크하세요");
+					return false;
+				}
+			});
+		});
+</script>
+
 </head>
 <% 
 	BoardDao dao = new BoardDao();
@@ -34,7 +53,7 @@
 			<th>Date</th>
 			<th>update</th>
 			<th>delete</th>
-	</tr>
+		</tr>
 	
 <% 
 		//for 반복문으로 테이블에 tr 태그 추가
@@ -56,7 +75,7 @@
 	<tr>
 		<td colspan="7">
 			<input type="submit" value="삭제">
-			<button onclick="location.href='insert.jsp'">글쓰기</button>
+			<input type="button" value="글쓰기" onclick="location.href='insert.jsp'">
 		</td>
 	</tr>
 	</table>

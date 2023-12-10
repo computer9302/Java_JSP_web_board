@@ -231,7 +231,7 @@ public class BoardDao {
 		int res = 0;
 		int[] cnt = null;
 		
-		String sql = "DELETE FROM BOARD WHERE BD_NO=? ";
+		String sql = "DELETE FROM BOARD WHERE BD_NO=?";
 		
 		try {
 			pstm = con.prepareStatement(sql);
@@ -247,6 +247,7 @@ public class BoardDao {
 			
 			//쿼리 성공 : -2
 			for(int i=0; i<cnt.length;i++) {
+		
 				if(cnt[i]==-2) {
 					res++;
 				}
